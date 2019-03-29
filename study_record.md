@@ -17,7 +17,7 @@ Date: 2019/03/19
 Title: 完成とは程遠いが
 Date: 2019/03/20
 
-今までの自分の実力からすれば、まだ幾分マシなものが作れたような気がします。しかし、文字が見にくいな。
+今までの自分の実力からすれば、まだ幾分マシなものが作れたような気がします。しかし、文字が見にくいですね。
 ![](https://res.cloudinary.com/dcim8mjwx/image/upload/v1553069244/4b4a9db8136238e69e7b94cf773a5881_vtn7f1.png)
 
 Title: とあるサイトのAPIを利用してスクレイピング（正確にはスクレイピングとは言わないはずですが）
@@ -110,6 +110,7 @@ Title: 少しアプローチを変えたコードに変更
 Date: 2019/03/23
 
 改めてAPIの仕様を見ると、もっと楽で確実な方法を見つけたのでそちらからのアプローチに変更。
+
 ```python
 import datetime
 import requests
@@ -124,6 +125,52 @@ from datetime import datetime
 # 60 * 60 * 9 = 32400
 # now = time.time()
 # print(datetime.fromtimestamp(1072915200))
+
+lists = 1104537600
+index  = 0
+
+for item in range(0, 365) :
+    minus = lists + 86400
+    url = "https://api.syosetu.com/novelapi/api/?firstup={first}-{second}&out=json&order=old&lim=500".format(first=lists, second=minus)
+    req = requests.get(url).json()
+    req = json.dumps(req)
+    df = pd.read_json(req)
+    df.to_csv('out{}.csv'.format(index), encoding='utf_8')
+    print(datetime.fromtimestamp(lists))
+    lists += 86400
+    index +=1
+    print(lists)
+    print(item)
+    time.sleep(1)
+
+files = glob.glob('out*.csv')
+list = []
+
+for index, item in enumerate(files):
+    list.append(pd.read_csv(item))
+    print(index)
+    df = pd.concat(list)
+    df.to_csv('data.csv', encoding='utf_8')
+    os.remove(item)
+```
+
+Title: ほぼコード修正は終了
+Date: 2019/03/29
+
+細かい修正を施して、これにてこのコーディングは終了。
+
+```python
+import datetime
+import requests
+import pandas as pd
+import json
+import glob
+import os
+import time
+import time
+from datetime import datetime
+
+# 60 * 60 * 9 = 32400
 
 lists = 1104537600
 index  = 0
