@@ -1,4 +1,4 @@
-Title: 最初のStudy Record
+Title: 最初のStudy Record  
 Date: 2019-03-17
 
 昨日は *ブロックチェーン初心者の集い 1* でした！
@@ -7,20 +7,20 @@ Date: 2019-03-17
 ![昨日の模様1](https://res.cloudinary.com/dcim8mjwx/image/upload/v1552769035/DSC_0194_xddjh6.jpg)  
   
   
-Title: ようやくポートフォリオ作成に着手
+Title: ようやくポートフォリオ作成に着手  
 Date: 2019/03/19
 
 まだまだ殺風景です。
 ![まだ殺風景](https://res.cloudinary.com/dcim8mjwx/image/upload/v1553002371/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88_2019-03-19_22.32.20_uz9jwo.png)
 
 
-Title: 完成とは程遠いが
+Title: 完成とは程遠いが  
 Date: 2019/03/20
 
 今までの自分の実力からすれば、まだ幾分マシなものが作れたような気がします。しかし、文字が見にくいですね。
 ![](https://res.cloudinary.com/dcim8mjwx/image/upload/v1553069244/4b4a9db8136238e69e7b94cf773a5881_vtn7f1.png)
 
-Title: とあるサイトのAPIを利用してスクレイピング（正確にはスクレイピングとは言わないはずですが）
+Title: とあるサイトのAPIを利用してスクレイピング（正確にはスクレイピングとは言わないはずですが）  
 Date: 2019/03/21
 
 もう少し手直ししていきます。
@@ -63,7 +63,7 @@ for f in files:
     os.remove(f)
 ```
 
-Title: 前日の続き
+Title: 前日の続き  
 Date: 2019/03/22
 
 引き続き手直ししていきます。
@@ -106,7 +106,7 @@ for index, item in enumerate(files):
     os.remove(item)
 ```
 
-Title: 少しアプローチを変えたコードに変更
+Title: 少しアプローチを変えたコードに変更  
 Date: 2019/03/23
 
 改めてAPIの仕様を見ると、もっと楽で確実な方法を見つけたのでそちらからのアプローチに変更。
@@ -154,7 +154,7 @@ for index, item in enumerate(files):
     os.remove(item)
 ```
 
-Title: ほぼコード修正は終了
+Title: ほぼコード修正は終了  
 Date: 2019/03/29
 
 細かい修正を施して、これにてこのコーディングは終了。
@@ -199,3 +199,4 @@ for index, item in enumerate(files):
     df.to_csv('data.csv', encoding='utf_8')
     os.remove(item)
 ```
+
