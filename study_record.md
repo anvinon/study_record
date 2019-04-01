@@ -200,3 +200,8 @@ for index, item in enumerate(files):
     os.remove(item)
 ```
 
+Title: 本格的にDjangoプロジェクト作成開始  
+Date: 2019/04/01
+
+本格的にDjangoプロジェクトの作成をしました。プロジェクト名はgusiqとしておきました。ドメインはgusiq.gqの予定。ひとまず、リポジトリのみ貼っておきます。  
+https://github.com/anvinon/gusiq
